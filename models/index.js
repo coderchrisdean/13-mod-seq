@@ -6,12 +6,15 @@ const ProductTag = require('./ProductTag');
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
+  // **can only belong to one category
   foreignKey: 'category_id',
 });
 
 // Categories have many Products
 Category.hasMany(Product, {
+  // **can have many products
   foreignKey: 'category_id',
+
 });
 
 
