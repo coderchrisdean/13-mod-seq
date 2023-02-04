@@ -13,6 +13,7 @@ ProductTag.init(
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
+  },
     product_id: {
       type: DataTypes.INTEGER,
       // references the product model's id
@@ -20,45 +21,16 @@ ProductTag.init(
         model: 'product', 
         key: 'id',
       },
-      tag_id: {
-        type: DataTypes.INTEGER,
-        // references the tag model's id
-        references: {
-          model: 'tag',
-          key: 'id',
-          },
-        },
     },
-
-  },
-  product_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    
-  },
-  price: {
-    type: DataTypes.DECIMAL(10, 2),
-    allowNull: false,
-    validate: {
-      isDecimal: true,
-    },
-  },
-  stock: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    defaultValue: 10,
-    validate: {
-      isNumeric: true,
-    },
-    category_id: {
+    tag_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
+      tag_id: {
+        model: 'tag',
         key: 'id',
       },
     },
+  
   },
-  },  
 
   {
     sequelize,
