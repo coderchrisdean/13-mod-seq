@@ -6,7 +6,13 @@ const { Category, Product } = require("../../models");
 router.get("/", async (req, res) => {
   // find all categories
   // be sure to include its associated Products
-  let categoryData = await Category.findAll({ include: [{ model: Product }] });
+  let categoryData = await Category.findAll({
+    include: [
+      {
+        model: Product
+      },
+    ],
+  });
   res.status(200).json(categoryData);
 });
 
@@ -15,9 +21,11 @@ router.get("/:id", async (req, res) => {
 
   const categoryData = await Category.findOne({
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
-    include: [{ model: Product }],
+    include: [
+      { model: Product }
+    ],
   });
   res.status(200).json(categoryData);
 });
@@ -32,7 +40,7 @@ router.put("/:id", async (req, res) => {
   // update a category by its `id` value
   const updatedCategory = await Category.update(req.body, {
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
   });
   res.status(200).json(updatedCategory);
@@ -42,7 +50,7 @@ router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
   const deletedCategory = await Category.destroy({
     where: {
-      id: req.params.id,
+      id: req.params.id
     },
   });
   res.status(200).json(deletedCategory);

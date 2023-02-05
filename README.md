@@ -1,4 +1,6 @@
 # Table of Contents
+
+
 - [Table of Contents](#table-of-contents)
   - [Week 13 - ORM Sequelize Project](#week-13---orm-sequelize-project)
   - [Description](#description)
@@ -8,33 +10,41 @@
   - [License](#license)
   - [Link to GitHub Repository](#link-to-github-repository)
   - [Link to Video Walkthrough](#link-to-video-walkthrough)
+
 <hr>
 
 ## Week 13 - ORM Sequelize Project
+
 This is a project for Week 13 UC Berkeley Coding Bootcamp.
+
 ## Description
+
  The project is to create a backend for an e-commerce site using Sequelize to interact with a MySQL database. The project is to create the database models and associations, and the API routes to perform RESTful CRUD operations on the database. The project is to seed the database with test data, and to test the API routes using Insomnia Core.
 
 ## Installation
+
 To install necessary dependencies, run the following command:
+
 ```
 npm i
 ```
+
 ## Usage
+
 To run the application, run the following command:
+
 ```
 npm start
 ```
 
 ## Questions
+
 If you have any questions about the repo, open an issue or contact me directly at [email](mailto:coderchrisdean@gmail.com).
 
 ## License
+
 This project is licensed under the MIT license.
 
 ## Link to GitHub Repository
 
 ## Link to Video Walkthrough
-
-
-  

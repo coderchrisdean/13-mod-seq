@@ -1,4 +1,20 @@
-{
+
+  {
+    "MD013": {
+      "headings": [2,3],
+      "line_length": false
+    },
+    "MD014": {
+      "code_blocks": false,
+      "tables": false
+    },
+    "MD015": {
+      "code_blocks": false,
+      "tables": false
+    },
+    "MD032": {
+      "blanks_around_lists": false
+    },
     "ignores": [
       "README.md"
     ]

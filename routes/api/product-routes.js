@@ -10,12 +10,12 @@ router.get("/", (req, res) => {
   Product.findAll({
     include: [
       {
-        model: Category,
-        attributes: ["id", "category_name"],
+        model: Category
+      
       },
       {
-        model: Tag,
-        attributes: ["id", "tag_name"],
+        model: Tag
+   
       },
     ],
   })
@@ -35,12 +35,12 @@ router.get("/:id", async (req, res) => {
     const productData = await Product.findByPk(req.params.id, {
       include: [
         {
-          model: Category,
-          attributes: ["id", "category_name"],
+          model: Category
+       
         },
         {
           model: Tag,
-          attributes: ["id", "tag_name"],
+     
         },
       ],
     });
@@ -75,7 +75,7 @@ router.post("/", (req, res) => {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
             product_id: product.id,
-            tag_id,
+            tag_id
     
           };
         });
@@ -97,7 +97,7 @@ router.put("/:id", async (req, res) => {
   try {
     const product = Product.update(req.body, {
       where: {
-        id: req.params.id,
+        id: req.params.id
       },
     });
  console.log(product);
@@ -112,7 +112,7 @@ router.put("/:id", async (req, res) => {
         .map((tag_id) => {
           return {
             product_id: req.params.id,
-            tag_id,
+            tag_id
           };
         });
       // figure out which ones to remove
@@ -133,14 +133,13 @@ router.put("/:id", async (req, res) => {
 });
 
 // delete product
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete one product by its `id` value
-  const deleteProduct = Product.destroy({
+  const deleteProduct = await Product.destroy({
     where: {
-      id: req.params.id,
-    },
+      id: req.params.id
+    }
   });
-  console.log(deleteProduct);
   res.status(200).json(deleteProduct);
 });
 
