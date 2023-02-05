@@ -11,18 +11,11 @@ const sequelize = process.env.JAWSDB_URL
       {
         host: "localhost",
         dialect: "mysql",
-        port: 3306,
-
         dialectOptions: {
           decimalNumbers: true,
         },
-        pool: {
-          max: 5,
-          min: 0,
-          acquire: 30000,
-          idle: 10000,
-        },
-        database: "ecommerce_db",
+
+        // database: "ecommerce_db",
       }
     );
 
