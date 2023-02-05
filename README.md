@@ -10,6 +10,7 @@
   - [License](#license)
   - [Link to GitHub Repository](#link-to-github-repository)
   - [Link to Video Walkthrough](#link-to-video-walkthrough)
+  - [Create Schema Video (Part 2)](#create-schema-video-part-2)
 
 <hr>
 
@@ -47,4 +48,15 @@ This project is licensed under the MIT license.
 
 ## Link to GitHub Repository
 
+https://github.com/coderchrisdean/13-mod-seq
+
 ## Link to Video Walkthrough
+
+https://drive.google.com/file/d/1gXAptJhLcJ1XVkWQgeNcYBlRi4f7iKVG/view
+
+## Create Schema Video (Part 2)
+
+I forgot to include how to create the schema from MySQL shell:
+
+https://drive.google.com/file/d/1Tz4XP0vP5w-zpGm433QqHWFuRUTUWfhc/view
+
