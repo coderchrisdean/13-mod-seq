@@ -44,8 +44,7 @@ If you have any questions about the repo, open an issue or contact me directly a
 
 ## License
 
-This project is licensed under the MIT license.
-
+None
 ## Link to GitHub Repository
 
 https://github.com/coderchrisdean/13-mod-seq
